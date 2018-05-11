@@ -1,0 +1,21 @@
+sudo: required
+
+services:
+- docker
+
+arch:
+  packages:
+    - ninja
+    - git
+    - repo
+    - python
+    - python-pip
+
+  script:
+    - mkdir lineage-15.1 && cd lineage-15.1/
+    - repo init -u git://github.com/LineageOS/android.git -b lineage-15.1
+    - mv ../lineage-15.1_land_local_manifest.xml .repo/manifests/
+    - repo sync -c -j32 --force-sync --no-clone-bundle --no-tags
+
+script:
+  - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
