@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="github" fetch="https://github.com" pushurl="ssh://git@github.com"/>
+
+	<project remote="github" path="device/xiaomi/land" name="TeamReloaded/android_device_xiaomi_land" />
+  <project remote="github" path="kernel/xiaomi/msm8937" name="TeamReloaded/android_kernel_xiaomi_msm8937" />
+  <project remote="github" path="vendor/xiaomi" name="TeamReloaded/proprietary_vendor_xiaomi" />
+</manifest>
